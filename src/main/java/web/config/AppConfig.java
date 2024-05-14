@@ -1,6 +1,6 @@
 package web.config;
 
-import jakarta.annotation.Resource;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -21,10 +21,9 @@ import java.util.Properties;
 @PropertySource("classpath:db.properties")
 @EnableTransactionManagement
 @ComponentScan(value = "web")
-@PropertySource("classpath:db.properties")
 public class AppConfig {
 
-    @Resource
+    @Autowired
     private Environment env;
 
     @Bean

@@ -23,6 +23,7 @@ public class UserController {
         model.addAttribute("users", userService.getAllUsers());
         return "users";
     }
+
     @GetMapping("/get")
     public String getUserById(@RequestParam(value = "id", required = false) Long id, Model model) {
         if (id == null) {
